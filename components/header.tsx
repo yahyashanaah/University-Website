@@ -13,7 +13,7 @@ const navItems = [
   { en: "Admissions", ar: "القبول", path: "#registration" },
   { en: "Qur’an College", ar: "كلية القرآن وعلومه", path: "/quran-college" },
   { en: "News", ar: "الأخبار" },
-  { en: "Contact", ar: "اتصل بنا" },
+  { en: "Contact", ar: "اتصل بنا", path: "/#contact" },
 ]
 
 

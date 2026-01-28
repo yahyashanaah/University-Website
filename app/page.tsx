@@ -30,7 +30,9 @@ export default function Home() {
           <section id="registration"> <Registration /> </section>
           <StudentOffers />
         </main>
+        <section id="contact">
         <Footer />
+        </section>
         <WhatsAppButton />
       </div>
     </LanguageProvider>

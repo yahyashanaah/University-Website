@@ -2,6 +2,8 @@
 
 import { Header } from "@/components/header"
 import { useLanguage } from "@/lib/language-context"
+import { Footer } from "@/components/footer"
+
 
 export default function QuranCollegePage() {
   const { language } = useLanguage()
@@ -183,6 +185,7 @@ export default function QuranCollegePage() {
         </section>
         <div className="max-w-4xl mx-auto px-6 space-y-10"></div>
       </div>
+      <Footer />
     </>
   );
 }
