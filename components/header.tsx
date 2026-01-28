@@ -4,21 +4,25 @@ import { useState, useEffect } from "react"
 import { useLanguage } from "@/lib/language-context"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
+import Link from "next/link"
 
 const navItems = [
-  { en: "Home", ar: "الرئيسية" },
-  { en: "About", ar: "عن الجامعة" },
-  { en: "Programs", ar: "البرامج" },
-  { en: "Admissions", ar: "القبول" },
-  { en: "Campus", ar: "الحياة الجامعية" },
+  { en: "Home", ar: "الرئيسية", path: "/" },
+  { en: "About", ar: "عن الجامعة", path: "/#about" },
+  { en: "Programs", ar: "البرامج", path: "/#programs" },
+  { en: "Admissions", ar: "القبول", path: "#registration" },
+  { en: "Qur’an College", ar: "كلية القرآن وعلومه", path: "/quran-college" },
   { en: "News", ar: "الأخبار" },
   { en: "Contact", ar: "اتصل بنا" },
 ]
+
 
 export function Header() {
   const { language, setLanguage, t, dir } = useLanguage()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const isHome = typeof window !== "undefined" && window.location.pathname === "/"
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,35 +44,33 @@ export function Header() {
           dir={dir}
         >
           {/* Logo */}
-          <div className="flex items-center gap-4">
+          <Link href="/" className="flex items-center gap-4">
+            {" "}
             <img
               src="/logo.svg"
               alt="University Logo"
-              className={`w-12 lg:w-20 transition-all duration-300 ${
-                scrolled ? "text-emerald" : "text-white"
-              }`}
-            />
-
+              className={`w-12 lg:w-20 transition-all duration-300 ${scrolled ? "text-emerald" : "text-white"}`}
+            />{" "}
             <div className="hidden sm:block">
+              {" "}
               <p
-                className={`font-bold text-base lg:text-lg transition-colors duration-300 ${
-                  scrolled ? "text-emerald" : "text-white"
-                }`}
+                className={`font-bold text-base lg:text-lg transition-colors duration-300 ${scrolled ? "text-emerald" : "text-white"}`}
               >
+                {" "}
                 {t(
                   "International Islamic University",
                   "الجامعة الإسلامية العلمية",
-                )}
-              </p>
-            </div>
-          </div>
+                )}{" "}
+              </p>{" "}
+            </div>{" "}
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden xl:flex items-center gap-2">
             {navItems.map((item) => (
               <a
                 key={item.en}
-                href={`#${item.en.toLowerCase().replace(/\s+/g, "-")}`}
+                href={item.path}
                 className={`px-4 py-2 text-base font-semibold transition-colors duration-300 whitespace-nowrap ${
                   scrolled
                     ? "text-charcoal hover:text-emerald"
@@ -127,7 +129,7 @@ export function Header() {
               {navItems.map((item) => (
                 <a
                   key={item.en}
-                  href={`#${item.en.toLowerCase().replace(/\s+/g, "-")}`}
+                  href={item.path}
                   className={`px-5 py-4 rounded-lg transition-colors text-lg font-semibold ${
                     scrolled
                       ? "text-charcoal hover:text-emerald hover:bg-muted"

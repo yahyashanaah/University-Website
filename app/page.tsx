@@ -19,11 +19,15 @@ export default function Home() {
         <Header />
         <main>
           <Hero />
+          <section id="about">
           <Vision />
+          </section>
+          <section id="programs">
           <Faculties />
+          </section>
           <StudySystem />
           <TeachingMethods />
-          <Registration />
+          <section id="registration"> <Registration /> </section>
           <StudentOffers />
         </main>
         <Footer />
