@@ -6,7 +6,7 @@ export function WhatsAppButton() {
   const { t } = useLanguage()
   
   // Replace with actual WhatsApp number
-  const whatsappNumber = "+964 770 297 9755"
+  const whatsappNumber = "9647702979755"
   const whatsappUrl = `https://wa.me/${whatsappNumber}`
 
   return (
