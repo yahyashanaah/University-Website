@@ -24,22 +24,24 @@ export function Hero() {
       <div className="relative z-10 flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-28 pb-36">
         <div className="w-full mx-auto text-center" dir={dir}>
           {/* Quranic Verse */}
-          <div className="mb-12 text-center">
+          <div className="mb-12 flex flex-col items-center text-center">
             <p
-              className="text-gold text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-arabic drop-shadow-lg max-w-[90%] mx-auto leading-relaxed"
+              className="text-gold text-2xl sm:text-3xl md:text-4xl lg:text-5xl 
+               font-arabic drop-shadow-lg max-w-5xl leading-relaxed"
               dir="rtl"
             >
               يَرْفَعِ اللَّهُ الَّذِينَ آمَنُوا مِنكُمْ وَالَّذِينَ أُوتُوا
               الْعِلْمَ دَرَجَاتٍ
             </p>
 
-            <div className="w-24 sm:w-40 h-1 bg-gold mx-auto mt-6 mb-10" />
+            <div className="w-24 sm:w-40 h-1 bg-gold mt-6 mb-10" />
           </div>
 
           {/* Hadith */}
-          <blockquote className="mb-16 text-center">
+          <blockquote className="mb-16 flex justify-center text-center">
             <p
-              className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-arabic drop-shadow-lg max-w-[90%] mx-auto leading-relaxed"
+              className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl 
+               font-arabic drop-shadow-lg max-w-5xl leading-relaxed"
               dir="rtl"
             >
               "من سلك طريقًا يلتمس فيه علمًا سهّل الله له به طريقًا إلى الجنة."

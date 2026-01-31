@@ -37,7 +37,7 @@ const faculties = [
     nameEn: "Faculty of Creed",
     nameAr: "كلية العقيدة",
     departmentsEn: ["Islamic Theology", "Comparative Religion", "Philosophy of Religion"],
-    departmentsAr: ["علم الكلام", "مقارنة الأديان", "فلسفة الدين"],
+    departmentsAr: ["العقيدة الإسلامية", "مقارنة الأديان", "الثقافة الإسلامية"],
   },
   {
     icon: Landmark,

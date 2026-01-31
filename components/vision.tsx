@@ -48,7 +48,7 @@ export function Vision() {
             <p className="text-base text-muted-foreground leading-relaxed mt-4" dir={dir}>
               {t(
                 "It is an independent educational academic institution established in 2023 AD in the State of Iraq and in the State of Gambia together.",
-                "مؤسسة تعليمية أكاديمية مستقلة تأسست عام 2023م في دولة العراق ودولة غامبيا معًا."
+                "تأسست عام 2023 معتمدة من وزارة الخارجية الأمريكية"
               )}
             </p>
           </div>

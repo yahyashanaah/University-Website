@@ -60,7 +60,7 @@ export function Footer() {
               <p className="text-base text-primary-foreground/70 leading-relaxed mb-8">
                 {t(
                   "An independent educational academic institution established in 2023 AD in the State of Iraq and in the State of Gambia together.",
-                  "مؤسسة تعليمية أكاديمية مستقلة تأسست عام 2023 في دولة العراق ودولة غامبيا معًا.",
+                  "مؤسسة تعليمية أكاديمية مستقلة تأسست عام 2023 في دولة العراق.",
                 )}
               </p>
 
@@ -126,7 +126,7 @@ export function Footer() {
                 <li className="flex items-start gap-4">
                   <MapPin className="w-6 h-6 text-gold flex-shrink-0 mt-0.5" />
                   <span className="text-base text-primary-foreground/70">
-                    {t("Iraq & Gambia", "العراق وغامبيا")}
+                    {t("Iraq", "العراق")}
                   </span>
                 </li>
                 <li className="flex items-center gap-4">
