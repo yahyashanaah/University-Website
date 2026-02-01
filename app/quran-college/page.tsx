@@ -8,6 +8,152 @@ import { Footer } from "@/components/footer"
 export default function QuranCollegePage() {
   const { language } = useLanguage()
 
+  const gallery = [
+    {
+      src: "/images/image_1.jpg",
+      name: {
+        ar: "دكتور أحمد ذنون",
+        en: "Dr. Ahmed Thanoon",
+      },
+      position: {
+        ar: "أ. مساعد كلية القرآن وعلومه",
+        en: "Assistant Professor, College of Qur’an & its Sciences",
+      },
+    },
+    {
+      src: "/images/image_2.jpg",
+      name: {
+        ar: "دكتور عبدالله جدوع",
+        en: "Dr. Abdullah Jadoa",
+      },
+      position: {
+        ar: "أ. مساعد كلية القرآن وعلومه",
+        en: "Assistant Professor, College of Qur’an & its Sciences",
+      },
+    },
+    {
+      src: "/images/image_3.jpg",
+      name: {
+        ar: "دكتور محمد بن أحمد البدور",
+        en: "Dr. Mohammed bin Ahmed Al‑Badour",
+      },
+      position: {
+        ar: "عميد كلية القرآن وعلومه",
+        en: "Dean, College of Qur’an & its Sciences",
+      },
+    },
+    {
+      src: "/images/image_4.jpg",
+      name: {
+        ar: "دكتور محمود الفاعوري",
+        en: "Dr. Mahmoud Al‑Faouri",
+      },
+      position: {
+        ar: "رئيس قسم التفسير كلية القرآن وعلومه",
+        en: "Head of Tafsir Department",
+      },
+    },
+    {
+      src: "/images/image_5.jpg",
+      name: {
+        ar: "دكتور حازم أبو عليا",
+        en: "Dr. Hazem Abu Alia",
+      },
+      position: {
+        ar: "نائب عميد كلية القرآن وعلومه",
+        en: "Vice Dean, College of Qur’an & its Sciences",
+      },
+    },
+    {
+      src: "/images/image_6.jpg",
+      name: {
+        ar: "دكتور عاطف رفاعي",
+        en: "Dr. Atef Rifai",
+      },
+      position: {
+        ar: "أ. مساعد كلية القرآن وعلومه",
+        en: "Assistant Professor, College of Qur’an & its Sciences",
+      },
+    },
+    {
+      src: "/images/image_7.jpg",
+      name: {
+        ar: "دكتور عماد الزقيلي",
+        en: "Dr. Imad Al‑Zuqaili",
+      },
+      position: {
+        ar: "أ. مساعد كلية القرآن وعلومه",
+        en: "Assistant Professor, College of Qur’an & its Sciences",
+      },
+    },
+    {
+      src: "/images/image_8.jpg",
+      name: {
+        ar: "دكتور محمد فتحي",
+        en: "Dr. Mohammed Fathi",
+      },
+      position: {
+        ar: "أ. مساعد كلية القرآن وعلومه",
+        en: "Assistant Professor, College of Qur’an & its Sciences",
+      },
+    },
+    {
+      src: "/images/image_9.jpg",
+      name: {
+        ar: "دكتور عماد الصمادي",
+        en: "Dr. Imad Al‑Samadi",
+      },
+      position: {
+        ar: "أ. مساعد كلية القرآن وعلومه",
+        en: "Assistant Professor, College of Qur’an & its Sciences",
+      },
+    },
+    {
+      src: "/images/image_10.jpg",
+      name: {
+        ar: "دكتور عامر القيسي",
+        en: "Dr. Amer Al‑Qaisi",
+      },
+      position: {
+        ar: "أ. مساعد كلية القرآن وعلومه",
+        en: "Assistant Professor, College of Qur’an & its Sciences",
+      },
+    },
+    {
+      src: "/images/image_11.jpg",
+      name: {
+        ar: "دكتور عامر القضاة",
+        en: "Dr. Amer Al‑Qudah",
+      },
+      position: {
+        ar: "أ. مساعد كلية القرآن وعلومه",
+        en: "Assistant Professor, College of Qur’an & its Sciences",
+      },
+    },
+    {
+      src: "/images/image_12.jpg",
+      name: {
+        ar: "الدكتور عبدالرحيم بوقته",
+        en: "Dr. Abdulrahim Bouqta",
+      },
+      position: {
+        ar: "أ. مساعد كلية القرآن وعلومه",
+        en: "Assistant Professor, College of Qur’an & its Sciences",
+      },
+    },
+    {
+      src: "/images/image_13.jpg",
+      name: {
+        ar: "الدكتور عبدالله شلنفح",
+        en: "Dr. Abdullah Shalanfah",
+      },
+      position: {
+        ar: "أ. مساعد تفسير وعلوم القرآن",
+        en: "Assistant Professor of Tafsir & Qur’anic Sciences",
+      },
+    },
+  ];
+
   return (
     <>
       <Header />
@@ -156,28 +302,24 @@ export default function QuranCollegePage() {
         <section className="w-full py-12 bg-emerald-50">
           <div className="max-w-4xl mx-auto px-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              {[
-                "/images/image1.png",
-                "/images/image2.png",
-                "/images/image3.png",
-                "/images/image4.png",
-                "/images/image5.png",
-                "/images/image6.png",
-                "/images/image7.png",
-                "/images/image8.png",
-                "/images/image9.png",
-                "/images/image10.png",
-                "/images/image11.png",
-              ].map((src, i) => (
+              {gallery.map((item, i) => (
                 <div
                   key={i}
-                  className="overflow-hidden rounded-xl shadow-md border border-gray-100"
+                  className="relative overflow-hidden rounded-xl shadow-md border border-gray-100 group"
                 >
                   <img
-                    src={src}
-                    alt={`Gallery image ${i + 1}`}
-                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                    src={item.src}
+                    alt={item.name[language]}
+                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
+
+                  {/* Overlay */}
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                    <h3 className="text-white font-semibold text-lg leading-tight">
+                      {item.name[language]}
+                    </h3>
+                    <p className="text-emerald-200 text-sm">{item.position[language]}</p>
+                  </div>
                 </div>
               ))}
             </div>
